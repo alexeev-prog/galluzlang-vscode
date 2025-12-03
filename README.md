@@ -7,11 +7,8 @@
   <h3>A high-performance systems language combining C++ power with LLVM19 optimization</h3>
 
   <div>
-    <a href="https://marketplace.visualstudio.com/items?itemName=alexeevdev.morning-language-syntax">
-      <img src="https://img.shields.io/badge/VSCode-extension?style=for-the-badge&logo=gitbook" alt="Docs">
-    </a>
     <a href="https://github.com/alexeev-prog/galluz-language/blob/main/LICENSE">
-      <img src="https://img.shields.io/badge/License-GPL_v3-blue?style=for-the-badge&logo=gnu" alt="License">
+      <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=MIT" alt="License">
     </a>
     <a href="https://github.com/alexeev-prog/galluz-language/stargazers">
       <img src="https://img.shields.io/github/stars/alexeev-prog/galluz-language?style=for-the-badge&logo=github" alt="Stars">
