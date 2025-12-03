@@ -1,0 +1,47 @@
+{
+  "icon": "logo.jpg",
+  "name": "galluz-language-syntax",
+  "displayName": "Galluz Language Syntax",
+  "description": "Official VS Code Extension for support Galluz Programming Language",
+  "repository": "https://github.com/alexeev-prog/galluzlang-vscode",
+  "publisher": "alexeevdev",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "galluz",
+        "aliases": [
+          "Galluz",
+          "GalluzLang"
+        ],
+        "extensions": [
+          ".galluz",
+          ".glz"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "galluz",
+        "scopeName": "source.galluz",
+        "path": "./syntaxes/galluzlang.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "galluz",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}

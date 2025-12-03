@@ -1,0 +1,149 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Galluz",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#builtins"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#flow-control"
+        },
+        {
+            "include": "#booleans"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#function-calls"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.galluzlang",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.galluzlang",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.galluzlang",
+                    "match": "\\b(defn|var|global|set|scope|do|if|while|defmodule|import|moduleuse|new|struct|getprop|setprop|hasprop|break|continue)\\b"
+                },
+                {
+                    "name": "keyword.other.galluzlang",
+                    "match": "\\b(module)\\b"
+                }
+            ]
+        },
+        "builtins": {
+            "patterns": [
+                {
+                    "name": "support.function.builtin.galluzlang",
+                    "match": "\\b(fprint|finput)\\b"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "storage.type.galluzlang",
+                    "match": "!\\b(int|double|str|bool|void|auto|struct)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.arithmetic.galluzlang",
+                    "match": "[+\\-*/%]"
+                },
+                {
+                    "name": "keyword.operator.comparison.galluzlang",
+                    "match": "[=<>!]=|[<>]"
+                }
+            ]
+        },
+        "flow-control": {
+            "patterns": [
+                {
+                    "name": "keyword.control.flow.galluzlang",
+                    "match": "\\b(break|continue)\\b"
+                }
+            ]
+        },
+        "booleans": {
+            "patterns": [
+                {
+                    "name": "constant.language.boolean.galluzlang",
+                    "match": "\\b(true|false)\\b"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.integer.galluzlang",
+                    "match": "\\b\\d+\\b"
+                },
+                {
+                    "name": "constant.numeric.float.galluzlang",
+                    "match": "\\b\\d+\\.\\d+\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.galluzlang",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.galluzlang",
+                    "match": "\\\\."
+                },
+                {
+                    "name": "constant.character.format.galluzlang",
+                    "match": "%[a-zA-Z]"
+                }
+            ]
+        },
+        "function-calls": {
+            "patterns": [
+                {
+                    "name": "meta.function.call.galluzlang",
+                    "begin": "\\(",
+                    "end": "\\)",
+                    "patterns": [
+                        {
+                            "include": "$self"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "scopeName": "source.galluz"
+}
